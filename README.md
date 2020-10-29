@@ -1,1 +1,1 @@
-# strona : https://sprus-patryk.herokuapp.com/
+# https://sprus-patryk.herokuapp.com/
