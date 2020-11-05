@@ -1,11 +1,15 @@
-table {
-  border-collapse: collapse;
-}
 body {
-  background-color: lightblue;
+  background-color: #78B37D;
 }
 
-h1 {
-  color: navy;
-  margin-left: 20px;
+table {
+  border-collapse: collapse;
+  
+}
+
+th {
+  background-color:#112DFF;
+  height: 70px;
+  text-align: center;
+  color: #FFFFFF;
 }
