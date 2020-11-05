@@ -5,7 +5,7 @@
 </head>
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-SprusPatryk/">github</a>
-    <h1>Patryk Sprus</h1>
+   
 
 <?php
 
