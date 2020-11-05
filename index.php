@@ -5,6 +5,9 @@
 </head>
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-SprusPatryk/">github</a>
+    <div class="nav">
+        <a href="orgPracownicy.php">orgPracownicy</a>
+        <a href="funcAgregujace.php">funcAgregujace</a>
     <h1>Patryk Sprus</h1>
    
 
@@ -41,6 +44,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+    
 ?>
 </body>
 </html>
