@@ -4,12 +4,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-SprusPatryk/">github</a>
-    <div class="nav">
-        <a href="orgPracownicy.php">orgPracownicy</a>
-        <a href="funcAgregujace.php">funcAgregujace</a>
+    <div>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-spruspatryk">Github</a><br/>
+    <a href="orgPracownicy.php">orgPracownicy.php</a><br/>
+    <a href="funkcAgregujace.php">funkcAgregujace.php</a><br/>
     </div>
-    <h1>Patryk Sprus</h1>
+  
+    <h1>Patryk Sprus nr 11</h1>
    
 
 <?php
