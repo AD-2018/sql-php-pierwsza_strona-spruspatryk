@@ -8,6 +8,7 @@
     <div class="nav">
         <a href="orgPracownicy.php">orgPracownicy</a>
         <a href="funcAgregujace.php">funcAgregujace</a>
+    </div>
     <h1>Patryk Sprus</h1>
    
 
