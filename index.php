@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $sql);
 
     while($row=mysqli_fetch_assoc($wynik)){
         echo('<tr>');
-        echo('<td>'.$wiersz['imie'].'</td>'.'<td>'.$wiersz['zarobki'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td>');
         echo('</tr>');
     }
 
