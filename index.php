@@ -1,6 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-FilipJablonski/">github</a>
+    <h1>Filip Jabłoński</h1>
 <?php
 
-$conn = new mysqli(mysql-patryksprus.alwaysdata.net","217136","@H@R8He5TsaaXJR","patryksprus_baza");
+$conn = new mysqli("mysql-patryksprus.alwaysdata.net","217136","@H@R8He5TsaaXJR","patryksprus_baza");
 $sql ="select * from pracownicy"; 
 echo("<h3>tabelka</h3>"); 
 $result = mysqli_query($conn, $sql);  
