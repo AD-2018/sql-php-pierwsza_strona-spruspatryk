@@ -8,7 +8,7 @@
     <h1>Patryk Sprus nr 11</h1>
 <div class="nav">
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
-    <a href="agreg.php">Funkcje Agregujące</a>
+    <a href="funkcAgregujace.php">Funkcje Agregujące</a>
 </div>
 </body>
 </html>
