@@ -10,7 +10,7 @@
 
 $conn = new mysqli("mysql-patryksprus.alwaysdata.net","217136","@H@R8He5TsaaXJR","patryksprus_baza");
 $sql ="select * from pracownicy"; 
-echo("<h3>tabelka</h3>"); 
+echo("<h3>zadania</h3>"); 
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>"); 
