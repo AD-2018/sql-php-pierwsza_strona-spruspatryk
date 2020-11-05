@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-FilipJablonski/">github</a>
-    <h1>Filip Jabłoński</h1>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-SprusPatryk/">github</a>
+    <h1>Patryk Sprus</h1>
 <?php
 
 $conn = new mysqli("mysql-patryksprus.alwaysdata.net","217136","@H@R8He5TsaaXJR","patryksprus_baza");
