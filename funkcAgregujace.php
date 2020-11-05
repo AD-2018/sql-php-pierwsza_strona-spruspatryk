@@ -5,7 +5,7 @@
 </head>
 <body>
         <div class="nav">
-    <a href="index.php">main</a>
+    <a href="index.php">menu</a>
 </div>
 </body>
 </html>
