@@ -24,11 +24,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+    echo('<th>suma zarobków</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
 
