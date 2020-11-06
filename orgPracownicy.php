@@ -57,7 +57,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Zad 3 <br>");
-$sql = "SELECT * FROM pracownicy, organizacja where imie like '%a'";
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie like '%a'"
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
