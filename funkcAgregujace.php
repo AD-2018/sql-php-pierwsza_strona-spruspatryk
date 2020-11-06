@@ -31,6 +31,7 @@ echo('<table border="1">');
         echo('<td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
+   echo('</table>');
 
 echo("<br>Zad 2 <br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and imie like '%a'";
