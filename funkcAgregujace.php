@@ -13,7 +13,7 @@
 require_once("connect.php");
 
 echo("<br>Zad 1 <br>");
-$sql = "select nazwa_dzial,sum(zarobki) from pracownicy,organizacja where id_org=dzial";
+$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
