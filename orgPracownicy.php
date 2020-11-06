@@ -35,7 +35,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Zad 2 <br>");
-$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and dzial=1 or dzial=4";
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and (dzial=1 or dzial=4)";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
