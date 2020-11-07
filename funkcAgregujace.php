@@ -72,40 +72,7 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
-echo("<br>Zad 3<br>");
-$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and (dzial=2 or dzial=3) and imie not like '%a'";
-echo($sql);
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo "<li>ok";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-echo('<table border="1">');
-    echo('<th>suma zarobków</th>');
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['suma_zarobków'].'</td>');
-        echo('</tr>');
-    }
-    echo('</table>');
-echo("<br>Zad 3<br>");
-$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and (dzial=2 or dzial=3) and imie not like '%a'";
-echo($sql);
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo "<li>ok";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-echo('<table border="1">');
-    echo('<th>suma zarobków</th>');
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['suma_zarobków'].'</td>');
-        echo('</tr>');
-    }
-    echo('</table>');
+
 echo("<br>Zad 4<br>");
 $sql = "SELECT avg(zarobki) as srednia_zarobków FROM pracownicy, organizacja where id_org=dzial and imie not like '%a'";
 echo($sql);
