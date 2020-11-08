@@ -222,8 +222,7 @@ echo('<table border="1">');
     echo('</table>');
 
 
------------------------------------
-        echo("<br>Zad 12<br>");
+echo("<br>Zad 12<br>");
 $sql = "SELECT if(imie like '%a', 'kobiety', 'mezczyzni') as 'plec', sum(zarobki) from pracownicy,organizacja where dzial=id_org group by plec";
 echo($sql);
 $result = mysqli_query($conn, $sql);
