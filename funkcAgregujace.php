@@ -147,26 +147,6 @@ echo('<table border="1">');
     }
     echo('</table>');
 
-echo("<h2>Group by</h2>");
-
-
-echo("<br>Zad 9<br>");
-$sql ="SELECT sum(zarobki) as suma_zarobków from pracownicy";
-echo($sql);
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo "<li>ok";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-echo('<table border="1">');
-    echo('<th>suma zarobków</th><th>nazwa dzialu</th>);
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo("<td>".$row['suma_zarobków']."</td><td>".$row['nazwa_dzial']."</td>");    
-        echo('</tr>');
-    }
-    echo('</table>');
 
 
 ?>
