@@ -37,4 +37,50 @@ echo('<table border="1">');
         echo('</tr>');
     }
    echo('</table>');
+
+
+//---------
+
+
+echo("<br>Zad 2 <br>");
+$sql = "SELECT * from pracownicy where (dzial=2 or dzial=3)";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Dział</th><th>Imie</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['imie'].'</td>');
+        echo('</tr>');
+    }
+   echo('</table>');
+
+echo("<br>Zad 3 <br>");
+$sql = "SELECT * from pracownicy where zarobki<30";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Dział</th><th>Imie</th><th>Zarobki</th');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['imie'].'</td><td>'.$row['zarobki'].'</td>');
+        echo('</tr>');
+    }
+   echo('</table>');
    ?>
