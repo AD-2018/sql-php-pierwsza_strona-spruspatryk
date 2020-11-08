@@ -18,7 +18,7 @@
 require_once("connect.php");
 
 echo("<br>Zad 1 <br>");
-$sql = "SELECT * from pracownicy where dzial=2
+$sql = "SELECT * from pracownicy where dzial=2";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
