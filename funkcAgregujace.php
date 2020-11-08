@@ -222,25 +222,23 @@ echo('<table border="1">');
     echo('</table>');
 
 
-
--------------------------
-        
+-----------------------------------
         echo("<br>Zad 12<br>");
-$sql ="select if(imie like '%a', 'kobiety', 'mezczyzni') as 'plec', Sum(zarobki) from pracownicy,organizacja where dzial=id_org group by płeć";  
+$sql = "SELECT if(imie ike '%a', 'kobiety', 'mezczyzni') as 'plec', sum(zarobki) from pracownicy,organizacja where dzial=id_org group by plec;
+echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
-        echo "<br>";
+        echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-echo('<table border="1" class="tabela"'); 
-echo ("<tr><th>płeć</th><th>suma zarobków</th></tr>"); 
-while($row=mysqli_fetch_assoc($result)){ 
-  echo("<tr>");         
-  echo("<td>".$row['plec']."</td><td>".$row['Sum(zarobki)']."</td>");     
-  echo("</tr>"); } 
-echo('</table>'); 
-
------------------------------------
+echo('<table border="1">');
+    echo('<th>płeć</th><th>suma zarobków</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['plec'].'</td><td>'.$row['sum(zarobki)'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
 
 ?>
