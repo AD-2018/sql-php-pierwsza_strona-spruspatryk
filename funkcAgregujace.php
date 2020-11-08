@@ -341,7 +341,7 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1" class="tabela"'); 
-echo ("<tr><th>Nazwa Dzialu</th><th>Ilość pracowników</th></tr>"); 
+echo ("<tr><th>Nazwa Dzialu</th><th>Ilość pracowników w poszczególnych działach większa od 3 </th></tr>"); 
 while($row=mysqli_fetch_assoc($result)){ 
   echo("<tr>");         
   echo("<td>".$row['nazwa_dzial']."</td><td>".$row['ilość_pracowników']."</td>");     
