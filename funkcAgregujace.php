@@ -292,7 +292,8 @@ echo('<table border="1">');
     echo('</table>');
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 echo("<br>Zadanie 15</br>");
-$sql ="SELECT nazwa_dzial, sum(zarobki) as suma_zarobków from pracownicy,organizacja where dzial=id_org group by nazwa_dzial having Sum(zarobki)<28";  
+$sql ="SELECT nazwa_dzial, sum(zarobki) as suma_zarobków from pracownicy,organizacja where dzial=id_org group by nazwa_dzial having Sum(zarobki)<28"; 
+echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<br>";
