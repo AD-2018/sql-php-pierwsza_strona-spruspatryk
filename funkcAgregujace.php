@@ -77,6 +77,9 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 echo("<br>Zad 4<br>");
 $sql = "SELECT avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial and imie not like '%a'";
 echo($sql);
@@ -94,6 +97,8 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 echo("<br>Zad 5<br>");
@@ -114,6 +119,8 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 echo("<br>Zad 6<br>");
 $sql ="SELECT avg(zarobki) as średnia_zarobków from pracownicy where imie not like '%a' and (dzial=1 or dzial=2)"; 
@@ -133,6 +140,9 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 echo("<br>Zad 7<br>");
 $sql ="SELECT count(imie) as ilość_pracowników from pracownicy";
 echo($sql);
@@ -150,6 +160,9 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 echo("<h2> Group by </h2>");
 
@@ -171,6 +184,8 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 echo("<br>Zad 10<br>");
 $sql = "SELECT dzial,count(imie) as ilość_pracowników FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
@@ -189,6 +204,9 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 echo("<br>Zad 11<br>");
 $sql = "SELECT dzial,avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
@@ -206,6 +224,9 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -227,5 +248,47 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+echo("<br>Zad 12<br>");
+$sql = "SELECT if(imie like '%a', 'kobiety', 'mezczyzni') as 'plec', sum(zarobki) from pracownicy,organizacja where dzial=id_org group by plec";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>płeć</th><th>suma zarobków</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['plec'].'</td><td>'.$row['sum(zarobki)'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+echo("<br>Zad 13<br>");
+$sql = "SELECT if(imie like '%a', 'kobiety', 'mezczyzni') as 'plec', avg(zarobki) from pracownicy,organizacja where dzial=id_org group by plec";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>płeć</th><th>średnia zarobków</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['plec'].'</td><td>'.$row['avg(zarobki)'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
 
 ?>
