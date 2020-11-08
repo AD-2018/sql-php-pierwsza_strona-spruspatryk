@@ -33,6 +33,8 @@ echo('<table border="1">');
     }
    echo('</table>');
 
+ //------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 echo("<br>Zad 2 <br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and imie like '%a'";
 echo($sql);
@@ -54,6 +56,8 @@ echo('<table border="1">');
     }
 
     echo('</table>');
+
+ //------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo("<br>Zad 3<br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and (dzial=2 or dzial=3) and imie not like '%a'";
