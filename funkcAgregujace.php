@@ -199,7 +199,7 @@ echo('<table border="1">');
     echo('<th>dzial</th><th>ilość pracowników</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['dzial'].'</td><td>'.$row['ilość_pracowników'].'</td>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['ilość_pracowników'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
