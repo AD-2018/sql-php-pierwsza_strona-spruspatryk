@@ -230,28 +230,6 @@ echo('<table border="1">');
 
 
 
-
-echo("<br>Zad 12<br>");
-$sql = "SELECT if(imie like '%a', 'kobiety', 'mezczyzni') as 'plec', sum(zarobki) from pracownicy,organizacja where dzial=id_org group by plec";
-echo($sql);
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo "<li>ok";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-echo('<table border="1">');
-    echo('<th>płeć</th><th>suma zarobków</th>');
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['plec'].'</td><td>'.$row['sum(zarobki)'].'</td>');
-        echo('</tr>');
-    }
-    echo('</table>');
-
-//------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 echo("<br>Zad 12<br>");
 $sql = "SELECT if(imie like '%a', 'kobiety', 'mezczyzni') as 'plec', sum(zarobki) from pracownicy,organizacja where dzial=id_org group by plec";
 echo($sql);
@@ -290,5 +268,42 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+echo("<h2>Having</h2>");
+
+echo("<br>Zad 14<br>");
+$sql = "SELECT dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>dzial</th><th>suma zarobków</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+echo("<br>Zadanie 15</br>");
+$sql ="SELECT nazwa_dzial, sum(zarobki) as suma_zarobków from pracownicy,organizacja where dzial=id_org group by nazwa_dzial having Sum(zarobki)<28";  
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<br>";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>Nazwa Dzialu</th><th>Suma Zarobkow mniejsza od 28</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");         
+  echo("<td>".$row['nazwa_dzial']."</td><td>".$row['suma_zarobków)']."</td>");     
+  echo("</tr>"); } 
+echo('</table>'); 
 ?>
