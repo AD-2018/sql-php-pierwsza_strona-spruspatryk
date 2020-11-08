@@ -179,7 +179,7 @@ echo('<table border="1">');
     echo('<th>Nazwa działu</th><th>suma zarobków</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['nazwa_dzail'].'</td><td>'.$row['suma_zarobków'].'</td>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -321,11 +321,35 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1" class="tabela"'); 
-echo ("<tr><th>Nazwa Dzialu</th><th>Średnia zarobków mężczyzn większe od 30</th></tr>"); 
+echo ("<tr><th>Nazwa Dzialu</th><th>Średnia zarobków mężczyzn większa od 30</th></tr>"); 
 while($row=mysqli_fetch_assoc($result)){ 
   echo("<tr>");         
   echo("<td>".$row['nazwa_dzial']."</td><td>".$row['średnia_zarobków']."</td>");     
   echo("</tr>"); } 
 echo('</table>'); 
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+echo("<br>Zadanie 17</br>");
+$sql ="SELECT nazwa_dzial, count(imie) as ilość_pracowników from pracownicy,organizacja where dzial=id_org group by nazwa_dzial having count(imie)>3"; 
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<br>";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>Nazwa Dzialu</th><th>Ilość pracowników</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");         
+  echo("<td>".$row['nazwa_dzial']."</td><td>".$row['ilość_pracowników']."</td>");     
+  echo("</tr>"); } 
+echo('</table>'); 
+
+
 ?>
+
+
 
