@@ -167,7 +167,7 @@ echo('<table border="1">');
 echo("<h2> Group by </h2>");
 
 echo("<br>Zad 9<br>");
-$sql = "SELECT dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
+$sql = "SELECT nazwa_dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -187,7 +187,7 @@ echo('<table border="1">');
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo("<br>Zad 10<br>");
-$sql = "SELECT dzial,count(imie) as ilość_pracowników FROM pracownicy, organizacja where id_org=dzial group by dzial";
+$sql = "SELECT nazwa_dzial,count(imie) as ilość_pracowników FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -208,7 +208,7 @@ echo('<table border="1">');
 
 
 echo("<br>Zad 11<br>");
-$sql = "SELECT dzial,avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
+$sql = "SELECT nazwa_dzial,avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -274,7 +274,7 @@ echo('<table border="1">');
 echo("<h2>Having</h2>");
 
 echo("<br>Zad 14<br>");
-$sql = "SELECT dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
+$sql = "SELECT nazwa_dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
