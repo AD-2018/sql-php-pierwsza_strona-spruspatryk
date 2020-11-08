@@ -176,10 +176,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>nazwa_dzial</th><th>suma zarobków</th>');
+    echo('<th>Nazwa działu</th><th>suma zarobków</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
+        echo('<td>'.$row['nazwa_dzail'].'</td><td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -196,7 +196,7 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>nazwa_dzial</th><th>ilość pracowników</th>');
+    echo('<th>Nazwa działu</th><th>ilość pracowników</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['ilość_pracowników'].'</td>');
@@ -217,10 +217,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>nazwa_dzial</th><th>średnia zarobków</th>');
+    echo('<th>Nazwa działu</th><th>średnia zarobków</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['dzial'].'</td><td>'.$row['średnia_zarobków'].'</td>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['średnia_zarobków'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -283,10 +283,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>nazwa_dzial</th><th>suma zarobków</th>');
+    echo('<th>Nazwa działu</th><th>suma zarobków</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
+        echo('<td>'.$row['nazwa_dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
