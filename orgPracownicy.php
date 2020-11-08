@@ -226,7 +226,7 @@ echo('<table border="1">');
 echo("<h2>Limit</h2>");
 
 echo("<br>Zad 10</br>");
- $sql ="SELECT * from pracownicy,organizacja where id_org=dzial and imie not like '%a' order by dzial asc, zarobki asc";
+    $sql ="select * from pracownicy,organizacja where id_org=dzial and dzial=4 order by zarobki desc limit 0, 2"; 
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
