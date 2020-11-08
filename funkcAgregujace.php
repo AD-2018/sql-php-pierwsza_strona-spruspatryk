@@ -147,7 +147,7 @@ echo('<table border="1">');
     }
     echo('</table>');
 
-echo("<h2>Group by<h2>");
+echo("<h2>Group by</h2>");
 
 
 echo("<br>Zad 9<br>");
@@ -160,10 +160,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>suma zarobków</th>');
+    echo('<th>suma zarobków</th><th>nazwa dzialu</th>);
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['suma_zarobków'].'</td>');
+        echo("<td>".$row['suma_zarobków']."</td><td>".$row['nazwa_dzial']."</td>");    
         echo('</tr>');
     }
     echo('</table>');
