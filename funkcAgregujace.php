@@ -147,29 +147,11 @@ echo('<table border="1">');
     }
     echo('</table>');
 
+echo("<h2>Group by<h2>");
 
 
-echo("<br>Zad 8<br>");
-$sql ="SELECT count(imie) as ilość_pracowników from pracownicy where (dzial=1 or dzial=3) and imie like '%a'";
-echo($sql);
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-        echo "<li>ok";
-    } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
-echo('<table border="1">');
-    echo('<th>ilość pracowników</th>');
-    while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['ilość_pracowników'].'</td>');
-        echo('</tr>');
-    }
-    echo('</table>');
-
-echo("<h2>Group by<h2>")
 echo("<br>Zad 9<br>");
-$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by nazwa_dzial";
+$sql ="SELECT sum(zarobki) as suma_zarobków from pracownicy";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
