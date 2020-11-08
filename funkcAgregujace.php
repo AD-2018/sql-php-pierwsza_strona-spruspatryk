@@ -308,3 +308,24 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
 ?>
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+echo("<br>Zadanie 16</br>");
+$sql ="SELECT nazwa_dzial, avg(zarobki) as średnia_zarobków from pracownicy,organizacja where dzial=id_org group by nazwa_dzial having avg(zarobki)>30"; 
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<br>";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>Nazwa Dzialu</th><th>Średnia zarobków mężczyzn większe od 30</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");         
+  echo("<td>".$row['nazwa_dzial']."</td><td>".$row['średnia_zarobków']."</td>");     
+  echo("</tr>"); } 
+echo('</table>'); 
+?>
+
