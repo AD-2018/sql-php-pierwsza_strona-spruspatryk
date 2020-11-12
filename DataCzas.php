@@ -60,7 +60,7 @@ echo('<table border="1">');
 //-----------------------
 
 echo("<br>Zad 3<br>");
-$sql ="SELECT *,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma_lat from pracownicy,organizacja where id_org=dzial"; 
+$sql ="SELECT *,sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma_lat from pracownicy,organizacja where id_org=dzial"; 
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -75,7 +75,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['suma_;at'].'</td>');
+        echo('<td>'.$row['suma_lat'].'</td>');
         echo('</tr>');
     }
 
