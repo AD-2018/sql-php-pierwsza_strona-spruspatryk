@@ -9,6 +9,7 @@
 <div class="nav">
     <a href="orgPracownicy.php">Organizacja Pracownicy</a>
     <a href="funkcAgregujace.php">Funkcje Agregujące</a>
+    <a href="DataCzas.php">Data i czas</a>
 </div>
 </body>
 </html>
