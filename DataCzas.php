@@ -166,10 +166,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo ("<tr><th>Średnia lat</th><th>Nazwa Działu</th></tr>"); 
+    echo('<th>Średnia lat</th><th>Nazwa działu</th>');
+
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-          echo("<td>".$row['srednia_lat']."</td><td>".$row['nazwa_dzial']."</td>");   
+        echo('<td>'.$row['srednia_lat'].'</td>'.'<td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
