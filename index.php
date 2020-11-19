@@ -35,11 +35,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imię</th><th>Dział</th><th>Zarobki</th><th>Data urodzenia</th>');
+    echo('<th>Dział</th><th>Imie</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$wiersz['imie'].'</td>'.'<td>'.$wiersz['dzial'].'</td>'.'<td>'.$wiersz['zarobki'].'</td>'.'<td>'.$wiersz['data_urodzenia'].'</td>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['imie'].'</td>');
         echo('</tr>');
     }
    echo('</table>');
@@ -60,11 +60,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imię</th><th>Dział</th><th>Zarobki</th><th>Data urodzenia</th>');
+    echo('<th>Dział</th><th>Imie</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$wiersz['imie'].'</td>'.'<td>'.$wiersz['dzial'].'</td>'.'<td>'.$wiersz['zarobki'].'</td>'.'<td>'.$wiersz['data_urodzenia'].'</td>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['imie'].'</td>');
         echo('</tr>');
     }
    echo('</table>');
@@ -81,11 +81,11 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imię</th><th>Dział</th><th>Zarobki</th><th>Data urodzenia</th>');
+    echo('<th>Dział</th><th>Imie</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$wiersz['imie'].'</td>'.'<td>'.$wiersz['dzial'].'</td>'.'<td>'.$wiersz['zarobki'].'</td>'.'<td>'.$wiersz['data_urodzenia'].'</td>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['imie'].'</td>');
         echo('</tr>');
     }
    echo('</table>');
