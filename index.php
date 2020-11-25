@@ -13,6 +13,7 @@
     <a href="DataCzas.php">Data i czas</a>
     <a href="formularz.html">Formularz</a>
     <a href="insert.php">Insert</a>
+    <a href="dodawanieprac.html">Dodawanie pracowników</a>
 
 
 </div>
