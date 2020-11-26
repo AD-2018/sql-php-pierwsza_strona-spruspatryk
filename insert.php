@@ -1,22 +1,12 @@
-
 <?php
-echo("jestes w insert.php");
-echo "<li>".$_POST['dzial'];
-echo "<li>".$_POST['imie'];
+require_once("connect.php");
 
-$servername = "mysql-patryksprus.alwaysdata.net";
-$username = "217136";
-$password = "@H@R8He5TsaaXJR";
-$dbname = "patryksprus_baza";
+$sql = "INSERT INTO pracownicy (id_pracownicy,imie, dzial, zarobki,data_urodzenia) 
+       VALUES (null,".'"'.$_POST['imie'].'"'.','.$_POST['dzial'].','.$_POST['zarobki'].','.'"'.$_POST['data_urodzenia'].'"'.')';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
-$sql = "INSERT INTO pracownicy (dzial, imie) 
-       VALUES (null, '".$_POST['dzial']."', '".$_POST['imie']."';
-  echo "New record created successfully";
+if ($conn->query($sql) === TRUE) {
+  echo $sql;
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
