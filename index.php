@@ -12,7 +12,7 @@
     <a href="funkcAgregujace.php">Funkcje Agregujące</a>
     <a href="DataCzas.php">Data i czas</a>
     <a href="formularz.html">Formularz</a>
-    <a href="dodawanieprac.html">Dodawanie pracowników</a>
+    <a href="dodawanieprac.php">Dodawanie pracowników</a>
 
 </div>
 </body>
