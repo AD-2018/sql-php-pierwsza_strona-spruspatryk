@@ -1,26 +1,13 @@
 <?php
-echo("jestes w delete.php <br>");
+require_once("connect.php");
+echo("Delete" . "<br>");
 echo $_POST['id'];
+echo "<br>";
 
-
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-//definiujemy zapytanie $sql
-$sql = "DELETE FROM Pracownik WHERE id=".$_POST['id'];
-
-//wyświetlamy zapytanie $sql
-echo $sql;
+$sql = "DELETE FROM pracownicy WHERE id_pracownicy=".$_POST['id'];
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
+  echo $sql;
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
