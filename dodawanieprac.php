@@ -37,14 +37,25 @@ $sql = "SELECT * FROM pracownicy, organizacja WHERE id_org = dzial";
 
     echo("<h1>Tabela</h1>");
 
-    echo("<table border='1'>");
-    echo("<th>ID</th><th>Imie</th><th>Zarobki</th><th>Data Urodzenia</th><th>Dział</th><th>Nazwa działu</th>");
-        while($row = mysqli_fetch_assoc($result)) {
-            echo("<tr>");
-            echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td>");
-            echo("</tr>");
-        };
-    echo("</table>");
+    echo('<table border="1">');
+echo('<th>Id</th><th>Imie</th><th>zarobki</th><th>dzial</th><th>Data urodzenia</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_pracownicy'].'</td>'.'<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td>'.'<td>'.$row['dzial'].'</td>'.'<td>'.$row['data_urodzenia'].'</td>'.
+	     
+	     '<td>
+	    
+	     <form action="delete.php" method="POST">
+  		<input type="number" name="id" value="'.$row['id_pracownicy'].'"></br>
+   		<input type="submit" value="x">
+	</form>
+	     
+	     </td>');
+	    
+        echo('</tr>');
+    }
+  echo('</table>');
 ?>
 </body>
 </html>
