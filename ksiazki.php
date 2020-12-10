@@ -40,7 +40,7 @@ echo('<table border="1">');
    echo('<th>Id</th><th>Tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['tytul'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['tytuł'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -58,7 +58,7 @@ echo('<table border="1">');
     echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytul_id'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytuł_id'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
