@@ -28,7 +28,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo("<br>zad 2<br>");
-$sql = "SELECT * FROM biblTytul";
+$sql = "SELECT * FROM biblTytuł";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
