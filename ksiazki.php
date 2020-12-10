@@ -44,6 +44,25 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+  
+echo("<br>zad 3<br>");
+$sql = "SELECT * FROM biblAutor_biblTytuł";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytul_id'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+?>
 ?>
 </body>
 </html>
