@@ -50,6 +50,23 @@ echo('<select name="Tytuł">');
     }
 echo('</select>');
   echo("<br>");
+  
+  echo("<br>lista<br>");
+$sql = "SELECT id_book, autor, tytul FROM bibl_book, biblTytuł, biblAutor WHERE biblTytuł.id = bibl_book.biblTytuł_id AND biblAutor.id = bibl_book.biblAutor_id";
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Id</th><th>Autor</th><th>Tytuł</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['id_book'].'</td><td>'.$row['autor'].'</td><td>'.$row['tytuł'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
 
 echo("<br>zad 1<br>");
 $sql = "SELECT * FROM biblAutor";
