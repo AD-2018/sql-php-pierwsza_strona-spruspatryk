@@ -10,7 +10,7 @@
 require_once("connect.php");
   
    echo ("<br>autorzy<br>");
-$sql = "SELECT * FROM bibl_autor";
+$sql = "SELECT * FROM biblAutor";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
@@ -31,7 +31,7 @@ echo('</select>');
   echo("<br>");
   
   echo ("<br>tytuł<br>");
-$sql = "SELECT * FROM bibl_tytuł";
+$sql = "SELECT * FROM biblTytuł";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
