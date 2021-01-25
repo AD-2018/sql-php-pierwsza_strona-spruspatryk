@@ -8,12 +8,12 @@
     <h1>Patryk Sprus nr 11</h1>
 <div class="nav">
     <a href="index.php">menu</a>
-    <a href="orgPracownicy.php">Organizacja Pracownicy</a>
-    <a href="funkcAgregujace.php">Funkcje Agregujące</a>
-    <a href="DataCzas.php">Data i czas</a>
-    <a href="formularz.html">Formularz</a>
-    <a href="dodawanieprac.php">Dodawanie pracowników</a>
-    <a href="ksiazki.php">książki</a>
+    <a href="/pracownicy/orgPracownicy.php">Organizacja Pracownicy</a>
+    <a href="/pracownicy/funkcAgregujace.php">Funkcje Agregujące</a>
+    <a href="/pracownicy/DataCzas.php">Data i czas</a>
+    <a href="/pracownicy/formularz.html">Formularz</a>
+    <a href="/pracownicy/dodawanieprac.php">Dodawanie pracowników</a>
+    <a href="/biblioteka/ksiazki.php">książki</a>
 
 </div>
 </body>
