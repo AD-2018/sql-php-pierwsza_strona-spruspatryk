@@ -9,7 +9,7 @@
     <a href="/index.php">menu</a>
     <a href="/pracownicy/orgPracownicy.php">Organizacja Pracownicy</a>
     <a href="/pracownicy/funkcAgregujace.php">Funkcje Agregujące</a>
-    <a href="/pracownicy/DataCzas.php">Data i czas</a>
+    <a href="/pracownicy/DataCzas.php">Data  czas</a>
 </div>
 </body>
 </html>
