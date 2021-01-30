@@ -6,7 +6,7 @@
 <body>
         <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-spruspatryk">GitHub</a>
 <div class="nav">
-    <a href="index.php">menu</a>
+    <a href="/index.php">menu</a>
     <a href="orgPracownicy.php">Organizacja Pracownicy</a>
     <a href="funkcAgregujace.php">Funkcje Agregujące</a>
     <a href="DataCzas.php">Data i czas</a>
