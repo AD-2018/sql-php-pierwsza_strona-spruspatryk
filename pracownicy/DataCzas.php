@@ -14,7 +14,7 @@
 </body>
 </html>
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 echo("<br>Zad 1 <br>");
 $sql ="SELECT *,YEAR(curdate())-YEAR(data_urodzenia) AS wiek from pracownicy,organizacja where id_org=dzial"; 
 echo($sql);
