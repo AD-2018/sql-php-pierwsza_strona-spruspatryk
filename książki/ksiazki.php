@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
   
 <?php
-require_once("connect.php");
+require_once("../connect.php");
   
    echo ("<br>autorzy<br>");
 $sql = "SELECT * FROM biblAutor";
