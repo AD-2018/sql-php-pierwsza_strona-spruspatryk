@@ -52,7 +52,7 @@ echo('</select>');
   echo("<br>");
   
   echo("<br>lista<br>");
-$sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where id_tytuł=biblTytuł_id AND id_autor=biblAutor_id order by id";
+$sql = "SELECT id_book, autor, tytuł FROM bibl_book, bibl_tytuł, bibl_autor WHERE bibl_tytuł.id_tytuł = bibl_book.id_tytuł AND bibl_autor.id_autor = bibl_book.id_autor";
 
 $result = mysqli_query($conn, $sql);
 if ( $result) {
