@@ -31,7 +31,7 @@ echo('</select>');
   echo("<br>");
   
   echo ("<br>tytuł<br>");
-$sql = "SELECT * FROM biblTytuł";
+$sql = "SELECT * FROM biblTytul";
 echo ("<li>".$sql);
   $result = mysqli_query($conn, $sql);
     if ( $result) {
@@ -44,15 +44,15 @@ echo ("<li>".$sql);
 echo('<select name="Tytuł">');
 
     while($row=mysqli_fetch_assoc($result)){
-        echo'<option value="'.$row['id_tytuł'].'">';
-        echo($row['tytuł']);
+        echo'<option value="'.$row['id_tytul'].'">';
+        echo($row['tytul']);
         echo"</option>"; 
     }
 echo('</select>');
   echo("<br>");
   
   echo("<br>lista<br>");
-$sql = "SELECT * FROM biblAutor_biblTytuł,biblTytuł,biblAutor where id_tytuł=biblTytuł_id AND id_autor=biblAutor_id order by id";
+$sql = "SELECT * FROM biblAutor_biblTytul,biblTytul,biblAutor where id_tytul=biblTytul_id AND id_autor=biblAutor_id order by id";
 
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -64,7 +64,7 @@ echo('<table border="1">');
     echo('<th>Id</th><th>Autor</th><th>Tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_book'].'</td><td>'.$row['autor'].'</td><td>'.$row['tytuł'].'</td>');
+        echo('<td>'.$row['id_book'].'</td><td>'.$row['autor'].'</td><td>'.$row['tytul'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -100,7 +100,7 @@ echo('<table border="1">');
    echo('<th>Id</th><th>Tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['tytuł'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['tytul'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -115,10 +115,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th>');
+    echo('<th>Id</th><th>Id Autor</th><th>Id tytul</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytuł_id'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytul_id'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
