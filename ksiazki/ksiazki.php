@@ -88,7 +88,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo("<br>zad 2<br>");
-$sql = "SELECT * FROM biblTytuł";
+$sql = "SELECT * FROM biblTytul";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -106,7 +106,7 @@ echo('<table border="1">');
     echo('</table>');
   
 echo("<br>zad 3<br>");
-$sql = "SELECT * FROM biblAutor_biblTytuł";
+$sql = "SELECT * FROM biblAutor_biblTytul";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
