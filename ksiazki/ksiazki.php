@@ -8,6 +8,13 @@
   
 <?php
 require_once("../connect.php");
+
+
+<h1>dodawanie autora</h1>
+<form action="/ksiazki/insertautor.php" method="POST">
+<label>Autor</label><input type="text" name="autor"></br>
+<input type="submit" value="dodaj autora">
+</form>
   
    echo ("<br>autorzy<br>");
 $sql = "SELECT * FROM biblAutor";
