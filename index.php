@@ -23,23 +23,10 @@
 <?php
 require_once("connect.php");
 
-echo("<h1>Tabelka Pracownicy</h1>");
+echo("<h1>Tabelka pracownicy</h1>");
 
     
-$sql = "INSERT INTO pracownicy (imie,dzial,zarobki) 
-   VALUES ('Patryk','1','21')";
 
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
-$result = mysqli_query($conn, $sql);
-if ( $result) {
-     echo "<br>";
- } else {
-   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
- }    
  $sql = "SELECT * from pracownicy";
  echo($sql);
  
