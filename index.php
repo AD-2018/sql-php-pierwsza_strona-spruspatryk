@@ -120,6 +120,7 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
+    
 echo('<table border="1">');
     echo('<th>Dział</th><th>Imie</th>');
 
