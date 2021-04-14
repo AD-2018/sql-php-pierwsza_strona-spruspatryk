@@ -14,7 +14,7 @@
     <a href="/pracownicy/formularz.html">Formularz</a>
     <a href="/pracownicy/dodawanieprac.php">Dodawanie pracowników</a>
     <a href="/ksiazki/ksiazki.php">książki</a>
-    <a href="/grid/index.html">Grid</a>
+    <a href="/grid/index.php">Grid</a>
 
 </div>
 </body>
