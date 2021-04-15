@@ -5,7 +5,7 @@
 </head>
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-spruspatryk">GitHub</a>
-    <h1>Patryk Sprus nr 11</h1>
+    <h1>Patryk Sprus nr11</h1>
 <div class="nav">
     <a href="https://sprus-patryk.herokuapp.com/index.php">menu</a>
     <a href="/pracownicy/orgPracownicy.php">Organizacja Pracownicy</a>
