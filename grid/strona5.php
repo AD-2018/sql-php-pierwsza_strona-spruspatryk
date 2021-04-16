@@ -10,7 +10,7 @@
 <body>
     <strong>
     <div class="str5">
-        <div class="str5A">
+        <div class="str5D">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM osoby_v2";
@@ -94,7 +94,7 @@
                             echo ("<br>");
                 ?>
         </div>
-        <div class="str5D">SPA</div>
+        <div class="str5A">SPA</div>
     </div>
     </strong>
 </body>

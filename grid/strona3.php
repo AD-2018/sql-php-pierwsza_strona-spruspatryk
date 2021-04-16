@@ -10,7 +10,7 @@
 <body>
     <strong>
     <div class="str3">
-        <div class="str1A">
+        <div class="str1C">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM osoby_v2";
@@ -66,7 +66,7 @@
                     echo("</table>");
                     echo ("<br>");
             ?></div>
-        <div class="str1C">
+        <div class="str1E">
         <?php
                         require_once("../connect.php");
                         $sql = "select imiona, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `patryksprus_baza`.WDW, `patryksprus_baza`.osoby_v2, `patryksprus_baza`.Osoby where Osoby.ID=osoby_id and osoby_v2.id=klasa_id order by ID_TAB asc";
@@ -93,7 +93,7 @@
                 ?>
         </div>
         <div class="str1D">4</div>
-        <div class="str1E">Przychodnia</div>
+        <div class="str1A">Przychodnia</div>
     </div>
     </strong>
 </body>

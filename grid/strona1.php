@@ -10,7 +10,7 @@
 <body>
     <strong>
     <div class="str1">
-        <div class="str1A">
+        <div class="str1C">
         <?php
                         require_once("../connect.php");
                         $sql = "SELECT * FROM biblTytul";
@@ -68,7 +68,7 @@
                             echo ("<br>");
                 ?>
         </div>
-        <div class="str1C">3</div>
+        <div class="str1A">3</div>
         <div class="str1D">
         <?php
                         require_once("../connect.php");

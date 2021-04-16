@@ -68,7 +68,7 @@
                     echo ("<br>");
             ?>
         </div>
-        <div class="str7C">
+        <div class="str7E">
         <?php
                         require_once("../connect.php");
                         $sql = "select sprawa, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `patryksprus_baza`.WDW, `patryksprus_baza`.Sprawa, `patryksprus_baza`.Osoby where Osoby.ID=osoby_id and Sprawa.id=klasa_id order by ID_TAB asc";
@@ -95,7 +95,7 @@
                 ?>
         </div>
         <div class="str7D">4</div>
-        <div class="str7E">5</div>
+        <div class="str7C">5</div>
         <div class="str7F">6</div>
         <div class="str7G">Kancelaria Prawna</div>
     </div>

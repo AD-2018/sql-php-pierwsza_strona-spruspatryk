@@ -10,7 +10,7 @@
 <body>
     <strong>
     <div class="str9">
-        <div class="str9A">
+        <div class="str9D">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM Osoby";
@@ -39,7 +39,7 @@
                     echo ("<br>");
             ?>
         </div>
-        <div class="str9B">
+        <div class="str9A">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM projekt";
@@ -94,7 +94,7 @@
                             echo ("<br>");
                 ?>
         </div>
-        <div class="str9D">4</div>
+        <div class="str9A">4</div>
         <div class="str9E">Firma</div>
     </div>
     </strong>

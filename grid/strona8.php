@@ -66,7 +66,7 @@
                 ?>
         </div>
         <div class="str8C">3</div>
-        <div class="str8D">
+        <div class="str8F">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM Osoby";
@@ -96,7 +96,7 @@
             ?>
         </div>
         <div class="str8E">5</div>
-        <div class="str8F">System Informatyczny</div>
+        <div class="str8D">System Informatyczny</div>
     </div>
     </strong>
 </body>
