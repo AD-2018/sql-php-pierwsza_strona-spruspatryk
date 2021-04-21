@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Filip Jabłoński 3Ti</title>
+    <title>Patryk Sprus 3Ti</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Grid.css">
 </head>
