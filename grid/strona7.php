@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Patryk Sprus 3Ti</title>
+    <title>Filip Jabłoński 3Ti</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Grid.css">
 </head>
@@ -10,7 +10,7 @@
 <body>
     <strong>
     <div class="str7">
-        <div class="str7A">
+        <div class="str7E">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM Sprawa";
@@ -32,14 +32,30 @@
                     echo("<th>ID</th><th>Sprawa Sądowa</th>");
                         while($row = mysqli_fetch_assoc($result)) {
                             echo("<tr>");
-                            echo("<td>".$row['id']."</td><td>".$row['sprawa']."</td>");
-                            echo("</tr>");
-                        };
+                            echo("<td>".$row['id']."</td><td>".$row['sprawa']."</td>".'<td>
+	    
+                            <form action="delete.php" method="POST">
+                             <input name="id" value="'.$row['id'].'" hidden>
+                             <input name="tabela" value="Sprawa" hidden>
+                             <input name="opcja" value="1" hidden>
+                              <input type="submit" class="button_x" value="X">
+                            </form>
+                            
+                            </td>');
+                           echo('</tr>');
+                       }
                     echo("</table>");
                     echo ("<br>");
             ?>
+                                                                <h3>Usuwanie po ID</h3>
+                <form action="delete.php" method="POST">
+                    <input type="number" name="id">
+                    <input name="tabela" value="Sprawa" hidden>
+                             <input name="opcja" value="1" hidden>
+                    <input type="submit" class="button_x" value="USUŃ">
+                </form>
         </div>
-        <div class="str7B">
+        <div class="str7A">
         <?php
                 require_once("../connect.php");
                 $sql = "SELECT * FROM Osoby";
@@ -61,14 +77,30 @@
                     echo("<th>ID</th><th>Imię i Nazwisko</th>");
                         while($row = mysqli_fetch_assoc($result)) {
                             echo("<tr>");
-                            echo("<td>".$row['ID']."</td><td>".$row['Imie-Nazwisko']."</td>");
-                            echo("</tr>");
-                        };
+                            echo("<td>".$row['ID']."</td><td>".$row['Imie-Nazwisko']."</td>".'<td>
+	    
+                            <form action="delete.php" method="POST">
+                             <input name="id" value="'.$row['ID'].'" hidden>
+                             <input name="tabela" value="Osoby" hidden>
+                             <input name="opcja" value="2" hidden>
+                              <input type="submit" class="button_x" value="X">
+                            </form>
+                            
+                            </td>');
+                           echo('</tr>');
+                       }
                     echo("</table>");
                     echo ("<br>");
             ?>
+                                                    <h3>Usuwanie po ID</h3>
+                <form action="delete.php" method="POST">
+                    <input type="number" name="id">
+                    <input name="tabela" value="Osoby" hidden>
+                             <input name="opcja" value="2" hidden>
+                    <input type="submit" class="button_x" value="USUŃ">
+                </form>
         </div>
-        <div class="str7E">
+        <div class="str7C">
         <?php
                         require_once("../connect.php");
                         $sql = "select sprawa, `Imie-Nazwisko`, (`WDW`.ID) as ID_TAB from `patryksprus_baza`.WDW, `patryksprus_baza`.Sprawa, `patryksprus_baza`.Osoby where Osoby.ID=osoby_id and Sprawa.id=klasa_id order by ID_TAB asc";
@@ -87,17 +119,31 @@
                             echo("<th>ID</th><th>Sprawa Sądowa</th><th>Prawnik</th>");
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo("<tr>");
-                                    echo("<td>".$row['ID_TAB']."</td><td>".$row['sprawa']."</td><td>".$row['Imie-Nazwisko']."</td>");
-                                    echo("</tr>");
-                                };
+                                    echo("<td>".$row['ID_TAB']."</td><td>".$row['sprawa']."</td><td>".$row['Imie-Nazwisko']."</td>".'<td>
+	    
+                                    <form action="delete.php" method="POST">
+                                     <input name="id" value="'.$row['ID_TAB'].'" hidden>
+                                     <input name="tabela" value="WDW" hidden>
+                                      <input type="submit" class="button_x" value="X">
+                                    </form>
+                                    
+                                    </td>');
+                                   echo('</tr>');
+                               }
                             echo("</table>");
                             echo ("<br>");
                 ?>
+                                <h3">Usuwanie po ID</h3>
+                <form action="delete.php" method="POST">
+                    <input type="number" name="id">
+                    <input name="tabela" value="WDW" hidden>
+                    <input type="submit" class="button_x" value="USUŃ">
+                </form>
         </div>
         <div class="str7D">4</div>
-        <div class="str7C">5</div>
+        <div class="str7G">5</div>
         <div class="str7F">6</div>
-        <div class="str7G">Kancelaria Prawna</div>
+        <div class="str7B">Kancelaria Prawna</div>
     </div>
     </strong>
 </body>

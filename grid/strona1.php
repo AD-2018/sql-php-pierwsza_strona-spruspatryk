@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Patryk Sprus 3Ti</title>
+    <title>Filip Jabłoński 3Ti</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Grid.css">
 </head>
@@ -10,7 +10,7 @@
 <body>
     <strong>
     <div class="str1">
-        <div class="str1C">
+        <div class="str1A">
         <?php
                         require_once("../connect.php");
                         $sql = "SELECT * FROM biblTytul";
@@ -32,14 +32,30 @@
                             echo("<th>ID</th><th>Tytuł</th>");
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo("<tr>");
-                                    echo("<td>".$row['id']."</td><td>".$row['tytul']."</td>");
-                                    echo("</tr>");
-                                };
+                                    echo("<td>".$row['id']."</td><td>".$row['tytul']."</td>".'<td>
+	    
+                                    <form action="delete.php" method="POST">
+                                     <input name="id" value="'.$row['id'].'" hidden>
+                                     <input name="tabela" value="biblTytul" hidden>
+                                     <input name="opcja" value="1" hidden>
+                                      <input type="submit" class="button_x" value="X">
+                                    </form>
+                                    
+                                    </td>');
+                                   echo('</tr>');
+                               }
                             echo("</table>");
                             echo ("<br>");
                 ?>
+                <h3>Usuwanie po ID</h3>
+                <form action="delete.php" method="POST">
+                    <input type="number" name="id">
+                    <input name="tabela" value="biblTytul" hidden>
+                    <input name="opcja" value="1" hidden>
+                    <input type="submit" class="button_x" value="USUŃ">
+                </form>
         </div>
-        <div class="str1B">
+        <div class="str1E">
         <?php
                         require_once("../connect.php");
                         $sql = "SELECT * FROM biblAutor";
@@ -61,14 +77,30 @@
                             echo("<th>ID</th><th>Autor</th>");
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo("<tr>");
-                                    echo("<td>".$row['id']."</td><td>".$row['autor']."</td>");
-                                    echo("</tr>");
-                                };
+                                    echo("<td>".$row['id']."</td><td>".$row['autor']."</td>".'<td>
+	    
+                                    <form action="delete.php" method="POST">
+                                     <input name="id" value="'.$row['id'].'" hidden>
+                                     <input name="tabela" value="biblAutor" hidden>
+                                     <input name="opcja" value="2" hidden>
+                                      <input type="submit" class="button_x" value="X">
+                                    </form>
+                                    
+                                    </td>');
+                                   echo('</tr>');
+                               }
                             echo("</table>");
                             echo ("<br>");
                 ?>
+                <h3>Usuwanie po ID</h3>
+                <form action="delete.php" method="POST">
+                    <input type="number" name="id"> 
+                    <input name="tabela" value="biblAutor" hidden>
+                    <input name="opcja" value="2" hidden>
+                    <input type="submit" class="button_x" value="USUŃ">
+                </form>
         </div>
-        <div class="str1A">3</div>
+        <div class="str1C">3</div>
         <div class="str1D">
         <?php
                         require_once("../connect.php");
@@ -88,14 +120,28 @@
                             echo("<th>ID</th><th>Tytuł</th><th>Autor</th>");
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo("<tr>");
-                                    echo("<td>".$row['ID_TAB']."</td><td>".$row['tytul']."</td><td>".$row['autor']."</td>");
-                                    echo("</tr>");
-                                };
+                                    echo("<td>".$row['ID_TAB']."</td><td>".$row['tytul']."</td><td>".$row['autor']."</td>".'<td>
+	    
+                                    <form action="delete.php" method="POST">
+                                     <input name="id" value="'.$row['ID_TAB'].'" hidden>
+                                     <input name="tabela" value="biblAutor_biblTytul" hidden>
+                                      <input type="submit" class="button_x" value="X">
+                                    </form>
+                                    
+                                    </td>');
+                                   echo('</tr>');
+                               }
                             echo("</table>");
                             echo ("<br>");
                 ?>
+                <h3>Usuwanie po ID</h3>
+                <form action="delete.php" method="POST">
+                    <input type="number" name="id">
+                    <input name="tabela" value="biblAutor_biblTytul" hidden>
+                    <input type="submit" class="button_x" value="USUŃ">
+                </form>
         </div>
-        <div class="str1E">Biblioteka</div>
+        <div class="str1B">Biblioteka</div>
     </div>
     </strong>
 </body>
