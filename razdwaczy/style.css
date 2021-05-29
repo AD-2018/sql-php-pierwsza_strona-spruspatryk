@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gird_uklad{
+    display: grid;
+    grid-template-areas: 
+    "a c b"
+    "d e f"
+    "z x f";
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto auto ;
+    height: 100vh;
+    
+
+}
+.gridA {
+    grid-area: a;
+    background-color: blue;
+}
+.gridB {
+    grid-area: b;
+    background-color: rgb(255, 0, 106);
+}
+.gridC {
+    grid-area: c;
+    background-color: rgb(62, 170, 12);
+}
+.gridD {
+    grid-area: d;
+    background-color: rgb(255, 196, 0);
+}
+.gridE {
+    grid-area: e;
+    background-color: rgb(219, 61, 224);
+}
+.gridF {
+    grid-area: f;
+    background-color: rgb(18, 221, 96);
+}
+.gridG {
+    grid-area: g;
+    background-color: rgb(211, 78, 45);
+}
+.gridZ {
+    grid-area: z;
+    background-color: rgb(117, 188, 197);
+}
+.gridX {
+    grid-area: x;
+    background-color: rgb(143, 125, 45);
+}
