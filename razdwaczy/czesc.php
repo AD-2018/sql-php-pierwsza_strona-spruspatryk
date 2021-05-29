@@ -4,7 +4,7 @@
 require_once("connect.php");	
 
 	
-$sql = "SELECT * FROM country WHERE continent = africa"
+$sql = "SELECT * FROM country WHERE continent = africa";
 $result = mysqli_query($conn, $sql);
 
     echo("<h1>Tabelka</h1>");
