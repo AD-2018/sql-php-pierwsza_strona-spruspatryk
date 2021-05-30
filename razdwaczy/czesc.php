@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
 <div class="grid_uklad">
-<div class="gridA"></div>
-        <div class="gridB"></div>
-        <div class="gridC"></div>
-        <div class="gridD"></div>
-        <div class="gridE"></div>
-        </div>
-
+<div class="gridA">
 <?php
 
 require_once("connect.php");
@@ -24,4 +18,12 @@ while($row = mysqli_fetch_assoc($result))
     echo("</table>");
     echo("</br>");
 ?>
+</div>
+        <div class="gridB"></div>
+        <div class="gridC"></div>
+        <div class="gridD"></div>
+        <div class="gridE"></div>
+        </div>
+
+
 </html>
