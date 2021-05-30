@@ -1,9 +1,9 @@
 <?php
 require_once("connect.php");
-$sql = "SELECT name from country where continent ='Africa'";
+$sql = "SELECT Name from country where Continent ='Africa'";
 $result = mysqli_query($conn,$sql);
 echo("<table border='1'>");
-echo(<"th>Kraj</th><th>Kontynent</th>");
+echo("<th>Kraj</th><th>Kontynent</th>");
 while($row = mysqli_fetch_assoc($result))
 {
     echo("<tr>");
@@ -13,3 +13,4 @@ while($row = mysqli_fetch_assoc($result))
     echo("<table>");
     echo(<"br>");
     ?>
+
