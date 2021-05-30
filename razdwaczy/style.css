@@ -5,6 +5,7 @@ padding: 0;}
     grid-template-columns: auto auto auto;
 grid-template-rows: auto auto ;
 display: grid;
+background-color: darkorange;
 height: 100vh;
 grid-template-areas: 
 "a b c"

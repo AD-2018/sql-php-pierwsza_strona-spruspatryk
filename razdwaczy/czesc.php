@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<div class="grid_uklad">
+
 
 <?php
 
@@ -15,3 +19,4 @@ while($row = mysqli_fetch_assoc($result))
     echo("</table>");
     echo("</br>");
 ?>
+</html>
