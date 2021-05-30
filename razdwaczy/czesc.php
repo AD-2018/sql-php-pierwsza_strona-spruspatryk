@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
 <div class="grid_uklad">
-
+<div class="gridA"></div>
+        <div class="gridB"></div>
+        <div class="gridC"></div>
+        <div class="gridD"></div>
+        <div class="gridE"></div>
+        </div>
 
 <?php
 
