@@ -8,9 +8,9 @@ echo("<table border='1'>");
 echo("<th>Kraj</th><th>kontynent</th>");
 while($row = mysqli_fetch_assoc($result))
 {
-    echo("<tr>")
+    echo("<tr>");
     echo("<td>".$row['Name']."</td><td>".$row['Continent']."</td>");
-    echo("</tr>")
+    echo("</tr>");
 };
     echo("</table>");
     echo("</br>");
