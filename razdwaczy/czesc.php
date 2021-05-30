@@ -1,7 +1,7 @@
 <?php
 require_once("connect.php");
 $sql = "SELECT * from country where continent = 'Africa'";
-$result = mysqli_query($conn,$sql);
+$result = mysqli_query($conn, $sql);
 echo("<table border='1'>");
 echo("<th>Kraj</th><th>kontynent</th>");
 while($row = mysqli_fetch_assoc($result))
