@@ -1,31 +1,32 @@
-*
-{margin: 0;
+*{margin: 0;
 padding: 0;}
 
 .grid_uklad{
-    display: grid;
-    grid-template-columns: auto auto ;
-    grid-template-rows: auto auto ;
-    height: 100vh;
-    grid-template-areas: 
-    "a d"
-    "b c";
-    
+    grid-template-columns: auto auto auto;
+grid-template-rows: auto auto auto;
+display: grid;
+height: 100vh;
+grid-template-areas: 
+"a b c"
+"a d e";}
 
-}
-.gridA {
-    background-color: blue;
+.gridA{
+    background-color: darkgreen;
     grid-area: a;
 }
-.gridB {
-    background-color: chartreuse;
+.gridB{
+    background-color: rgb(216, 38, 177);
     grid-area: b;
 }
-.gridC {
-    background-color: crimson;
+.gridC{
+    background-color: rgb(250, 31, 31);
     grid-area: c;
 }
-.gridD {
-    background-color: crimson;
+.gridD{
+    background-color: rgb(100, 98, 202);
     grid-area: d;
+}
+.gridE{
+    background-color: rgb(203, 223, 27);
+    grid-area: e;
 }
