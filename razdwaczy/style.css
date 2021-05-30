@@ -8,7 +8,7 @@ padding: 0;}
     grid-template-rows: auto auto ;
     height: 100vh;
     grid-template-areas: 
-    "a a"
+    "a d"
     "b c";
     
 
@@ -24,4 +24,8 @@ padding: 0;}
 .gridC {
     background-color: crimson;
     grid-area: c;
+}
+.gridD {
+    background-color: crimson;
+    grid-area: d;
 }
