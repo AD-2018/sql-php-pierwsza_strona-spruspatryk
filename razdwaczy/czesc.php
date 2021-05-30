@@ -1,4 +1,3 @@
-<html> <head>    <link rel="stylesheet" href="style.css">    <meta charset="UTF-8">    <title>Test</title> </head> <body class="uklad_grida"> 
 
 <?php
 
