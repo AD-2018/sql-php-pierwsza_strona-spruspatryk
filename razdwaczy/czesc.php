@@ -7,7 +7,7 @@ echo("<th>średnia cena</th>");
 while($row=mysqli_fetch_assoc($result))
 {
     echo("<tr>");
-    echo("<td>".$row['koszt']."</td>");
+    echo("<td>".$row['avg(koszt)']."</td>");
     echo("</tr>");
 
 }
