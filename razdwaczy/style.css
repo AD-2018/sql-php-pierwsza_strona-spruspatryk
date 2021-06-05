@@ -18,10 +18,10 @@
     background-color: cadetblue;
 }
 .gridB{
-    grid-area: a;
+    grid-area: b;
     background-color: rgb(27, 73, 141);
 }
 .gridC{
-    grid-area: a;
+    grid-area: c;
     background-color: rgb(218, 5, 136);
 }
