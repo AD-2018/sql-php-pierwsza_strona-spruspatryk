@@ -1,5 +1,5 @@
 <?php
-require_once("connect.php")
+require_once("connect.php");
 $sql = "SELECT sum(ilosc) from koszyk,klienci,zamowienia where zamowienia.id_klient=klienci.id_klient and zamowienia.id_zamowienie=koszyk.id_zamowienie and imie like '%a'";
 $result = mysqli_query($conn,$sql);
 echo("<table border='1'>");
